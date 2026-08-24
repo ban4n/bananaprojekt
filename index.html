@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Banana Projekt | Live Saxophone</title>
+
+    <meta name="description"
+          content="Banana Projekt — muzyka na żywo, saksofon, eventy i występy.">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #111111;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+
+            background: rgba(17, 17, 17, 0.88);
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid #292929;
+        }
+
+        nav {
+            max-width: 1100px;
+            height: 70px;
+
+            margin: auto;
+            padding: 0 24px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+
+            font-size: 14px;
+            color: #cccccc;
+        }
+
+        .nav-links a {
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 110px 24px 70px;
+
+            background:
+                radial-gradient(
+                    circle at 50% 35%,
+                    #3a3020 0,
+                    #191714 32%,
+                    #111111 65%
+                );
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: clamp(54px, 11vw, 120px);
+            line-height: 0.9;
+
+            letter-spacing: 5px;
+            font-weight: 900;
+        }
+
+        .hero p {
+            margin-top: 28px;
+
+            color: #d0d0d0;
+
+            font-size: clamp(16px, 2vw, 23px);
+
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .buttons {
+            margin-top: 40px;
+
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 13px 26px;
+
+            border: 1px solid #777777;
+            border-radius: 30px;
+
+            font-weight: 700;
+
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: white;
+            color: #111111;
+
+            border-color: white;
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            max-width: 900px;
+
+            margin: auto;
+
+            padding: 100px 24px;
+        }
+
+        section h2 {
+            font-size: 36px;
+            margin-bottom: 25px;
+        }
+
+        section p {
+            max-width: 700px;
+
+            color: #c7c7c7;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           MUSIC
+        ========================= */
+
+        .music-links {
+            margin-top: 30px;
+
+            display: flex;
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+        .music-link {
+            display: inline-block;
+
+            padding: 16px 28px;
+
+            border: 1px solid #444444;
+            border-radius: 10px;
+
+            background: #191919;
+
+            transition: 0.2s;
+        }
+
+        .music-link:hover {
+            transform: translateY(-3px);
+
+            border-color: #aaaaaa;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            max-width: none;
+
+            background: #191919;
+        }
+
+        .contact-inner {
+            max-width: 900px;
+
+            margin: auto;
+
+            padding: 0 24px;
+        }
+
+        .contact a {
+            display: inline-block;
+
+            margin-top: 15px;
+
+            font-size: 20px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+
+            padding: 30px 20px;
+
+            color: #777777;
+
+            font-size: 13px;
+
+            border-top: 1px solid #292929;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            nav {
+                height: 60px;
+            }
+
+            .logo {
+                font-size: 16px;
+            }
+
+            .nav-links {
+                gap: 12px;
+                font-size: 12px;
+            }
+
+            section {
+                padding: 75px 20px;
+            }
+
+            section h2 {
+                font-size: 30px;
+            }
+
+            section p {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         MENU
+    ========================= -->
+
+    <header>
+
+        <nav>
+
+            <a class="logo" href="#start">
+                BANANA PROJEKT
+            </a>
+
+            <div class="nav-links">
+
+                <a href="#o-mnie">
+                    O mnie
+                </a>
+
+                <a href="#muzyka">
+                    Muzyka
+                </a>
+
+                <a href="#kontakt">
+                    Kontakt
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- =========================
+             HERO
+        ========================= -->
+
+        <section class="hero" id="start">
+
+            <div class="hero-content">
+
+                <h1>
+                    BANANA<br>
+                    PROJEKT
+                </h1>
+
+                <p>
+                    Live Saxophone · Music
+                </p>
+
+
+                <div class="buttons">
+
+                    <a class="button" href="#muzyka">
+                        Posłuchaj
+                    </a>
+
+                    <a class="button" href="#kontakt">
+                        Kontakt
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             O MNIE
+        ========================= -->
+
+        <section id="o-mnie">
+
+            <h2>
+                O mnie
+            </h2>
+
+            <p>
+                Muzyka na żywo, saksofon i energia dopasowana
+                do wydarzenia. Banana Projekt to oprawa muzyczna
+                na eventy, imprezy, restauracje, wesela i inne okazje.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             MUZYKA
+        ========================= -->
+
+        <section id="muzyka">
+
+            <h2>
+                Muzyka
+            </h2>
+
+            <p>
+                Posłuchaj i zobacz moje występy.
+            </p>
+
+
+            <div class="music-links">
+
+                <!--
+                    TUTAJ WSTAW SWÓJ PRAWDZIWY LINK DO YOUTUBE
+                -->
+
+                <a
+                    class="music-link"
+                    href="https://youtube.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    ▶ YouTube
+                </a>
+
+
+                <!--
+                    TUTAJ WSTAW SWÓJ PRAWDZIWY LINK DO INSTAGRAMA
+                -->
+
+                <a
+                    class="music-link"
+                    href="https://instagram.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    ◎ Instagram
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             KONTAKT
+        ========================= -->
+
+        <section class="contact" id="kontakt">
+
+            <div class="contact-inner">
+
+                <h2>
+                    Kontakt
+                </h2>
+
+                <p>
+                    Chcesz zapytać o występ lub współpracę?
+                    Napisz lub zadzwoń.
+                </p>
+
+
+                <!--
+                    TUTAJ WSTAW SWÓJ EMAIL
+                -->
+
+                <a href="mailto:kontakt@bananaprojekt.pl">
+                    kontakt@bananaprojekt.pl
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         STOPKA
+    ========================= -->
+
+    <footer>
+
+        © 2026 Banana Projekt
+
+    </footer>
+
+
+</body>
+</html>
