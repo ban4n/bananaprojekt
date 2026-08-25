@@ -27,7 +27,7 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #111111;
+            background: #0b1014;
             color: #f5f5f5;
             line-height: 1.6;
         }
@@ -49,10 +49,10 @@
             width: 100%;
             z-index: 100;
 
-            background: rgba(17, 17, 17, 0.88);
+            background: rgba(11, 16, 20, 0.90);
             backdrop-filter: blur(10px);
 
-            border-bottom: 1px solid #292929;
+            border-bottom: 1px solid #1c2a34;
         }
 
         nav {
@@ -67,18 +67,37 @@
             justify-content: space-between;
         }
 
+
+        /* =========================
+           LOGO
+        ========================= */
+
         .logo {
-            font-size: 21px;
-            font-weight: 800;
-            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            height: 100%;
         }
+
+        .logo img {
+            display: block;
+
+            width: auto;
+            height: 45px;
+
+            max-width: 120px;
+        }
+
+
+        /* =========================
+           NAV LINKS
+        ========================= */
 
         .nav-links {
             display: flex;
             gap: 28px;
 
             font-size: 14px;
-            color: #cccccc;
+            color: #bfcbd3;
         }
 
         .nav-links a {
@@ -108,28 +127,41 @@
             background:
                 radial-gradient(
                     circle at 50% 35%,
-                    #3a3020 0,
-                    #191714 32%,
-                    #111111 65%
+                    #173246 0,
+                    #111e28 32%,
+                    #0b1014 65%
                 );
         }
 
         .hero-content {
             max-width: 900px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .hero h1 {
-            font-size: clamp(54px, 11vw, 120px);
-            line-height: 0.9;
 
-            letter-spacing: 5px;
-            font-weight: 900;
+        /* =========================
+           DUŻE LOGO
+        ========================= */
+
+        .hero-logo {
+            width: min(650px, 85vw);
+            height: auto;
+
+            display: block;
         }
+
+
+        /* =========================
+           HERO TEXT
+        ========================= */
 
         .hero p {
             margin-top: 28px;
 
-            color: #d0d0d0;
+            color: #c5d2da;
 
             font-size: clamp(16px, 2vw, 23px);
 
@@ -155,7 +187,7 @@
         .button {
             padding: 13px 26px;
 
-            border: 1px solid #777777;
+            border: 1px solid #627987;
             border-radius: 30px;
 
             font-weight: 700;
@@ -164,10 +196,10 @@
         }
 
         .button:hover {
-            background: white;
-            color: #111111;
+            background: #e9f1f5;
+            color: #0b1014;
 
-            border-color: white;
+            border-color: #e9f1f5;
         }
 
 
@@ -191,15 +223,77 @@
         section p {
             max-width: 700px;
 
-            color: #c7c7c7;
+            color: #bcc8cf;
 
             font-size: 18px;
         }
 
 
         /* =========================
+           O MNIE
+        ========================= */
+
+        .about {
+            max-width: 1100px;
+
+            padding: 120px 24px 50px;
+
+            scroll-margin-top: 70px;
+        }
+
+        .about-content {
+            display: grid;
+
+            grid-template-columns: 380px 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .about-photo {
+            width: 100%;
+            max-width: 380px;
+
+            height: auto;
+
+            display: block;
+
+            border-radius: 12px;
+        }
+
+        .about-text h2 {
+            font-size: 42px;
+
+            margin-bottom: 30px;
+        }
+
+        .about-text p {
+            max-width: none;
+
+            margin-bottom: 20px;
+
+            color: #bcc8cf;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+        }
+
+        .about-text strong {
+            color: #f5f5f5;
+        }
+
+
+        /* =========================
            MUSIC
         ========================= */
+
+        #muzyka {
+            padding-top: 50px;
+
+            scroll-margin-top: 70px;
+        }
 
         .music-links {
             margin-top: 30px;
@@ -215,10 +309,10 @@
 
             padding: 16px 28px;
 
-            border: 1px solid #444444;
+            border: 1px solid #304653;
             border-radius: 10px;
 
-            background: #191919;
+            background: #111c24;
 
             transition: 0.2s;
         }
@@ -226,7 +320,7 @@
         .music-link:hover {
             transform: translateY(-3px);
 
-            border-color: #aaaaaa;
+            border-color: #7e9aaa;
         }
 
 
@@ -237,7 +331,9 @@
         .contact {
             max-width: none;
 
-            background: #191919;
+            background: #111e28;
+
+            scroll-margin-top: 70px;
         }
 
         .contact-inner {
@@ -249,11 +345,17 @@
         }
 
         .contact a {
-            display: inline-block;
+            display: block;
 
             margin-top: 15px;
 
             font-size: 20px;
+        }
+
+        .phone {
+            font-size: 22px !important;
+
+            font-weight: 700;
         }
 
 
@@ -266,11 +368,11 @@
 
             padding: 30px 20px;
 
-            color: #777777;
+            color: #71808a;
 
             font-size: 13px;
 
-            border-top: 1px solid #292929;
+            border-top: 1px solid #1c2a34;
         }
 
 
@@ -278,20 +380,84 @@
            MOBILE
         ========================= */
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
 
             nav {
                 height: 60px;
+
+                padding: 0 18px;
             }
 
-            .logo {
-                font-size: 16px;
+            .logo img {
+                height: 40px;
+
+                max-width: 100px;
             }
 
             .nav-links {
                 gap: 12px;
+
                 font-size: 12px;
             }
+
+
+            /* HERO */
+
+            .hero-logo {
+                width: 85vw;
+            }
+
+
+            /* O MNIE */
+
+            .about {
+                padding: 80px 20px 40px;
+
+                scroll-margin-top: 60px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+            .about-photo {
+                max-width: 320px;
+
+                margin: auto;
+            }
+
+            .about-text h2 {
+                font-size: 32px;
+
+                margin-bottom: 20px;
+            }
+
+            .about-text p {
+                font-size: 16px;
+
+                line-height: 1.7;
+            }
+
+
+            /* MUZYKA */
+
+            #muzyka {
+                padding-top: 40px;
+
+                scroll-margin-top: 60px;
+            }
+
+
+            /* KONTAKT */
+
+            .contact {
+                scroll-margin-top: 60px;
+            }
+
+
+            /* SECTIONS */
 
             section {
                 padding: 75px 20px;
@@ -323,8 +489,14 @@
         <nav>
 
             <a class="logo" href="#start">
-                BANANA PROJEKT
+
+                <img
+                    src="images/logo.png"
+                    alt="Banana Projekt"
+                >
+
             </a>
+
 
             <div class="nav-links">
 
@@ -359,10 +531,12 @@
 
             <div class="hero-content">
 
-                <h1>
-                    BANANA<br>
-                    PROJEKT
-                </h1>
+                <img
+                    class="hero-logo"
+                    src="images/logo.png"
+                    alt="Banana Projekt"
+                >
+
 
                 <p>
                     Live Saxophone · Music
@@ -391,17 +565,68 @@
              O MNIE
         ========================= -->
 
-        <section id="o-mnie">
+        <section class="about" id="o-mnie">
 
-            <h2>
-                O mnie
-            </h2>
+            <div class="about-content">
 
-            <p>
-                Muzyka na żywo, saksofon i energia dopasowana
-                do wydarzenia. Banana Projekt to oprawa muzyczna
-                na eventy, imprezy, restauracje, wesela i inne okazje.
-            </p>
+
+                <!-- ZDJĘCIE -->
+
+                <div class="about-image">
+
+                    <img
+                        class="about-photo"
+                        src="images/bartoszbanasik.jpg"
+                        alt="Bartosz Banasik - saksofonista"
+                    >
+
+                </div>
+
+
+                <!-- TEKST -->
+
+                <div class="about-text">
+
+                    <h2>
+                        O mnie
+                    </h2>
+
+                    <p>
+                        <strong>
+                            Bartosz Banasik – muzyk, saksofonista i twórca muzyczny.
+                        </strong>
+                    </p>
+
+                    <p>
+                        Tworzę muzykę, w której najważniejsze są emocje,
+                        klimat i naturalne brzmienie saksofonu. Łączę
+                        doświadczenie muzyczne z energią występów na żywo,
+                        tworząc nastrojową oprawę dopasowaną do charakteru
+                        wydarzenia.
+                    </p>
+
+                    <p>
+                        Saksofon pozwala mi budować zarówno elegancki
+                        i subtelny klimat, jak i bardziej energetyczną
+                        atmosferę. Występuję podczas eventów, imprez,
+                        wesel, spotkań, kolacji i innych wyjątkowych okazji.
+                    </p>
+
+                    <p>
+                        <strong>Banana Projekt</strong> to muzyka na żywo,
+                        która ma tworzyć atmosferę i być częścią wydarzenia,
+                        a nie tylko jego tłem.
+                    </p>
+
+                    <p>
+                        Działam przede wszystkim w okolicach
+                        <strong>Katowic i Krakowa</strong>, ale jestem również
+                        otwarty na występy w innych rejonach Polski.
+                    </p>
+
+                </div>
+
+            </div>
 
         </section>
 
@@ -424,13 +649,9 @@
 
             <div class="music-links">
 
-                <!--
-                    TUTAJ WSTAW SWÓJ PRAWDZIWY LINK DO YOUTUBE
-                -->
-
                 <a
                     class="music-link"
-                    href="https://youtube.com/"
+                    href="https://www.youtube.com/@ban4naprOjekt"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -438,13 +659,9 @@
                 </a>
 
 
-                <!--
-                    TUTAJ WSTAW SWÓJ PRAWDZIWY LINK DO INSTAGRAMA
-                -->
-
                 <a
                     class="music-link"
-                    href="https://instagram.com/"
+                    href="https://www.instagram.com/ban4naprojekt/"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -475,12 +692,16 @@
                 </p>
 
 
-                <!--
-                    TUTAJ WSTAW SWÓJ EMAIL
-                -->
+                <a
+                    class="phone"
+                    href="tel:+48608199368"
+                >
+                    📞 608 199 368
+                </a>
+
 
                 <a href="mailto:kontakt@bananaprojekt.pl">
-                    kontakt@bananaprojekt.pl
+                    ✉ kontakt@bananaprojekt.pl
                 </a>
 
             </div>
