@@ -1,13 +1,183 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Banana Projekt | Live Saxophone</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description"
-          content="Banana Projekt — muzyka na żywo, saksofon, eventy i występy.">
+    <title>
+        Banana Projekt | Saksofonista Katowice i Kraków | Sax + DJ
+    </title>
+
+    <meta
+        name="description"
+        content="Banana Projekt – saksofonista na żywo, sax + DJ oraz oprawa muzyczna wesel, eventów, imprez i wyjątkowych okazji. Katowice, Kraków i inne rejony Polski."
+    >
+
+    <meta
+        name="author"
+        content="Bartosz Banasik | Banana Projekt"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="googlebot"
+        content="index, follow"
+    >
+
+
+    <!-- =========================
+         CANONICAL
+    ========================= -->
+
+    <link
+        rel="canonical"
+        href="https://bananaprojekt.pl/"
+    >
+
+
+    <!-- =========================
+         FAVICON
+    ========================= -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="images/favicon.png"
+    >
+
+    <link
+        rel="shortcut icon"
+        type="image/png"
+        href="images/favicon.png"
+    >
+
+
+    <!-- =========================
+         OPEN GRAPH
+    ========================= -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:locale"
+        content="pl_PL"
+    >
+
+    <meta
+        property="og:site_name"
+        content="Banana Projekt"
+    >
+
+    <meta
+        property="og:title"
+        content="Banana Projekt | Saksofonista | Sax + DJ"
+    >
+
+    <meta
+        property="og:description"
+        content="Saksofon na żywo, sax + DJ oraz oprawa muzyczna wesel, eventów i imprez. Katowice, Kraków i inne rejony Polski."
+    >
+
+    <meta
+        property="og:url"
+        content="https://bananaprojekt.pl/"
+    >
+
+    <meta
+        property="og:image"
+        content="https://bananaprojekt.pl/images/logo.png"
+    >
+
+    <meta
+        property="og:image:alt"
+        content="Banana Projekt – saksofonista i sax + DJ"
+    >
+
+
+    <!-- =========================
+         TWITTER / X
+    ========================= -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="Banana Projekt | Saksofonista | Sax + DJ"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Saksofon na żywo, sax + DJ, wesela, eventy i imprezy. Katowice, Kraków i inne rejony Polski."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://bananaprojekt.pl/images/logo.png"
+    >
+
+
+    <!-- =========================
+         STRUCTURED DATA
+    ========================= -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Bartosz Banasik",
+        "alternateName": "Banana Projekt",
+        "jobTitle": "Saksofonista i muzyk",
+        "description": "Saksofonista na żywo oraz sax + DJ na wesela, eventy, imprezy i wyjątkowe okazje.",
+        "url": "https://bananaprojekt.pl/",
+        "telephone": "+48608199368",
+        "sameAs": [
+            "https://www.youtube.com/@ban4naprOjekt",
+            "https://www.instagram.com/ban4naprojekt/",
+            "https://soundcloud.com/banana-projekt"
+        ],
+        "knowsAbout": [
+            "saksofon",
+            "muzyka na żywo",
+            "sax DJ",
+            "sax + DJ",
+            "oprawa muzyczna",
+            "wesela",
+            "eventy",
+            "imprezy"
+        ],
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Katowice"
+            },
+            {
+                "@type": "City",
+                "name": "Kraków"
+            },
+            {
+                "@type": "Country",
+                "name": "Polska"
+            }
+        ]
+    }
+    </script>
+
 
     <style>
 
@@ -143,7 +313,7 @@
 
 
         /* =========================
-           DUŻE LOGO
+           HERO LOGO
         ========================= */
 
         .hero-logo {
@@ -155,17 +325,35 @@
 
 
         /* =========================
+           H1
+        ========================= */
+
+        .hero h1 {
+            margin-top: 20px;
+
+            font-size: clamp(24px, 4vw, 42px);
+
+            line-height: 1.2;
+
+            font-weight: 700;
+
+            color: #f5f5f5;
+        }
+
+
+        /* =========================
            HERO TEXT
         ========================= */
 
         .hero p {
-            margin-top: 28px;
+            margin-top: 22px;
 
             color: #c5d2da;
 
             font-size: clamp(16px, 2vw, 23px);
 
             letter-spacing: 3px;
+
             text-transform: uppercase;
         }
 
@@ -179,6 +367,7 @@
 
             display: flex;
             justify-content: center;
+
             gap: 14px;
 
             flex-wrap: wrap;
@@ -188,6 +377,7 @@
             padding: 13px 26px;
 
             border: 1px solid #627987;
+
             border-radius: 30px;
 
             font-weight: 700;
@@ -197,6 +387,7 @@
 
         .button:hover {
             background: #e9f1f5;
+
             color: #0b1014;
 
             border-color: #e9f1f5;
@@ -217,6 +408,7 @@
 
         section h2 {
             font-size: 36px;
+
             margin-bottom: 25px;
         }
 
@@ -253,6 +445,7 @@
 
         .about-photo {
             width: 100%;
+
             max-width: 380px;
 
             height: auto;
@@ -299,6 +492,7 @@
             margin-top: 30px;
 
             display: flex;
+
             gap: 15px;
 
             flex-wrap: wrap;
@@ -310,6 +504,7 @@
             padding: 16px 28px;
 
             border: 1px solid #304653;
+
             border-radius: 10px;
 
             background: #111c24;
@@ -356,6 +551,14 @@
             font-size: 22px !important;
 
             font-weight: 700;
+        }
+
+        .phone-icon {
+            color: #ffffff;
+
+            margin-right: 6px;
+
+            font-size: 23px;
         }
 
 
@@ -405,6 +608,18 @@
 
             .hero-logo {
                 width: 85vw;
+            }
+
+            .hero h1 {
+                font-size: 25px;
+
+                margin-top: 18px;
+            }
+
+            .hero p {
+                font-size: 14px;
+
+                letter-spacing: 2px;
             }
 
 
@@ -474,6 +689,7 @@
         }
 
     </style>
+
 </head>
 
 
@@ -488,11 +704,15 @@
 
         <nav>
 
-            <a class="logo" href="#start">
+            <a
+                class="logo"
+                href="#start"
+                aria-label="Banana Projekt – strona główna"
+            >
 
                 <img
                     src="images/logo.png"
-                    alt="Banana Projekt"
+                    alt="Banana Projekt – saksofonista i sax + DJ"
                 >
 
             </a>
@@ -527,15 +747,24 @@
              HERO
         ========================= -->
 
-        <section class="hero" id="start">
+        <section
+            class="hero"
+            id="start"
+        >
 
             <div class="hero-content">
+
 
                 <img
                     class="hero-logo"
                     src="images/logo.png"
-                    alt="Banana Projekt"
+                    alt="Banana Projekt – muzyka na żywo i saksofon"
                 >
+
+
+                <h1>
+                    Saksofonista na żywo | Sax + DJ
+                </h1>
 
 
                 <p>
@@ -545,11 +774,18 @@
 
                 <div class="buttons">
 
-                    <a class="button" href="#muzyka">
+                    <a
+                        class="button"
+                        href="#muzyka"
+                    >
                         Posłuchaj
                     </a>
 
-                    <a class="button" href="#kontakt">
+
+                    <a
+                        class="button"
+                        href="#kontakt"
+                    >
                         Kontakt
                     </a>
 
@@ -565,25 +801,25 @@
              O MNIE
         ========================= -->
 
-        <section class="about" id="o-mnie">
+        <section
+            class="about"
+            id="o-mnie"
+        >
 
             <div class="about-content">
 
-
-                <!-- ZDJĘCIE -->
 
                 <div class="about-image">
 
                     <img
                         class="about-photo"
                         src="images/bartoszbanasik.jpg"
-                        alt="Bartosz Banasik - saksofonista"
+                        alt="Bartosz Banasik – saksofonista Banana Projekt"
+                        loading="lazy"
                     >
 
                 </div>
 
-
-                <!-- TEKST -->
 
                 <div class="about-text">
 
@@ -591,37 +827,75 @@
                         O mnie
                     </h2>
 
-                    <p>
-                        <strong>
-                            Bartosz Banasik – muzyk, saksofonista i twórca muzyczny.
-                        </strong>
-                    </p>
 
                     <p>
+
+                        <strong>
+                            Bartosz Banasik – muzyk, saksofonista
+                            i twórca muzyczny.
+                        </strong>
+
+                    </p>
+
+
+                    <p>
+
                         Tworzę muzykę, w której najważniejsze są emocje,
                         klimat i naturalne brzmienie saksofonu. Łączę
                         doświadczenie muzyczne z energią występów na żywo,
                         tworząc nastrojową oprawę dopasowaną do charakteru
                         wydarzenia.
+
                     </p>
 
+
                     <p>
+
                         Saksofon pozwala mi budować zarówno elegancki
                         i subtelny klimat, jak i bardziej energetyczną
-                        atmosferę. Występuję podczas eventów, imprez,
-                        wesel, spotkań, kolacji i innych wyjątkowych okazji.
+                        atmosferę. Występuję podczas wesel, eventów,
+                        imprez, spotkań, kolacji i innych wyjątkowych okazji.
+
                     </p>
 
-                    <p>
-                        <strong>Banana Projekt</strong> to muzyka na żywo,
-                        która ma tworzyć atmosferę i być częścią wydarzenia,
-                        a nie tylko jego tłem.
-                    </p>
 
                     <p>
+
+                        <strong>
+                            Banana Projekt
+                        </strong>
+
+                        to muzyka na żywo, która ma tworzyć atmosferę
+                        i być częścią wydarzenia, a nie tylko jego tłem.
+
+                    </p>
+
+
+                    <p>
+
+                        Oferuję również formułę
+
+                        <strong>
+                            sax + DJ
+                        </strong>
+
+                        – połączenie muzyki klubowej i tanecznej
+                        z żywym brzmieniem saksofonu.
+
+                    </p>
+
+
+                    <p>
+
                         Działam przede wszystkim w okolicach
-                        <strong>Katowic i Krakowa</strong>, ale jestem również
-                        otwarty na występy w innych rejonach Polski.
+
+                        <strong>
+                            Katowic i Krakowa
+                        </strong>
+
+                        , ale jestem również otwarty na występy
+                        w innych rejonach Polski.
+
                     </p>
 
                 </div>
@@ -642,18 +916,25 @@
                 Muzyka
             </h2>
 
+
             <p>
-                Posłuchaj i zobacz moje występy.
+
+                Posłuchaj i zobacz moje występy na żywo.
+                Saksofon, muzyka na żywo oraz format sax + DJ
+                na wesela, eventy i imprezy.
+
             </p>
 
 
             <div class="music-links">
+
 
                 <a
                     class="music-link"
                     href="https://www.youtube.com/@ban4naprOjekt"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Banana Projekt na YouTube"
                 >
                     ▶ YouTube
                 </a>
@@ -664,8 +945,20 @@
                     href="https://www.instagram.com/ban4naprojekt/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Banana Projekt na Instagramie"
                 >
                     ◎ Instagram
+                </a>
+
+
+                <a
+                    class="music-link"
+                    href="https://soundcloud.com/banana-projekt"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Banana Projekt na SoundCloud"
+                >
+                    ◉ SoundCloud
                 </a>
 
             </div>
@@ -678,7 +971,10 @@
              KONTAKT
         ========================= -->
 
-        <section class="contact" id="kontakt">
+        <section
+            class="contact"
+            id="kontakt"
+        >
 
             <div class="contact-inner">
 
@@ -686,21 +982,31 @@
                     Kontakt
                 </h2>
 
+
                 <p>
-                    Chcesz zapytać o występ lub współpracę?
+
+                    Chcesz zapytać o występ,
+                    sax + DJ lub współpracę?
+
                     Napisz lub zadzwoń.
+
                 </p>
 
 
                 <a
                     class="phone"
                     href="tel:+48608199368"
+                    aria-label="Zadzwoń do Banana Projekt"
                 >
-                    📞 608 199 368
+                    <span class="phone-icon">☎</span>
+                    608 199 368
                 </a>
 
 
-                <a href="mailto:kontakt@bananaprojekt.pl">
+                <a
+                    href="mailto:kontakt@bananaprojekt.pl"
+                    aria-label="Napisz email do Banana Projekt"
+                >
                     ✉ kontakt@bananaprojekt.pl
                 </a>
 
@@ -714,7 +1020,7 @@
 
 
     <!-- =========================
-         STOPKA
+         FOOTER
     ========================= -->
 
     <footer>
@@ -725,4 +1031,5 @@
 
 
 </body>
+
 </html>
